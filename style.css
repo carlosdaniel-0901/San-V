@@ -1,0 +1,74 @@
+body {
+    background: #ffccd5;
+    font-family: "Indie Flower", cursive;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    position: relative;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.flor {
+    width: 150px;
+    display: block;
+    margin: auto;
+    animation: moveFlower 2s infinite ease-in-out alternate;
+    transform-origin: bottom center; /* Punto de pivote en la base */
+}
+
+@keyframes moveFlower {
+    0% { transform: rotate(-5deg) skewX(-2deg); }
+    100% { transform: rotate(5deg) skewX(2deg); }
+}
+
+
+.button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #ff6b6b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#toggleMusic {
+    margin-top: 20px;
+    padding: 10px;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.heart-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    animation: float 2s infinite ease-in-out;
+}
+
+.heart {
+    width: 40px;
+    position: absolute;
+    animation: float 3s linear infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-500px); opacity: 0; }
+    
+}
